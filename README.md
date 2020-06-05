@@ -40,4 +40,15 @@ npm install
 
 を実行してね。
 
+<h2> ★ Vueの有効化</h2>
+
+今回は、Vue を使用するため、認証していきます。
+下記のコマンドを叩いてね。
+
+```
+composer require laravel/ui
+php artisan ui vue --auth
+npm install
+```
+
 <h3 style="color: lime"> ひとまず環境設定は以上かな？</h3>
