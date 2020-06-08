@@ -1,7 +1,7 @@
 @extends('templates/template')
 
 @section('title', 'HOME')
-@section('css1', '/HouseOfStoryteller/public/css/index.css')
+@section('css1', '/case4/public/css/home.css')
 @include('templates/header')
 
 @section('content')
