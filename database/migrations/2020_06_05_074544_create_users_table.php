@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name')->comment('ユーザー任意の名前');
             $table->string('mail')->comment('ユーザーのメールアドレス');
             $table->string('password')->comment('ユーザーのパスワード（hash化）');
-            $table->dateTime('user_created_at');
-            $table->datetime('user_updated_at');
-            $table->integer('user_status')->comment('0=退会、1=正常');
+            $table->dateTime('created_at');
+            $table->datetime('updated_at');
+            $table->integer('status')->comment('0=退会、1=正常');
         });
     }
 

@@ -17,7 +17,7 @@ class CreateTweetsTable extends Migration
             $table->id()->comment('tweet格納ID');
             $table->string('text');
             $table->string('location');
-            $table->stirng('tweeted_at');
+            $table->string('tweeted_at');
         });
     }
 
