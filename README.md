@@ -12,7 +12,7 @@
 なので、
 
 ```
-copy .env.example .env
+cp .env.example .env
 ```
 
 とコマンドに入力してね。
