@@ -11,7 +11,7 @@ class Tweets extends Seeder
      */
     public function run()
     {
-        //
+        //ツイート
         DB::table('Tweets')->insert([
             'id' => 1050118621198921700,
             'text' => 'COVID-19',

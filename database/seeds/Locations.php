@@ -11,7 +11,7 @@ class Locations extends Seeder
      */
     public function run()
     {
-        //
+        //場所
         DB::table('Location')->insert([
             'id' => 1,
             'user_id' => 1,

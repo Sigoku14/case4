@@ -11,7 +11,7 @@ class Infections extends Seeder
      */
     public function run()
     {
-        //
+        //感染症
         DB::table('Infections')->insert([
             'id' => 1,
             'number' => 1,
