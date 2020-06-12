@@ -14,10 +14,10 @@ class CreateTweetsTable extends Migration
     public function up()
     {
         Schema::create('tweets', function (Blueprint $table) {
-            $table->id()->comment('tweet格納ID');
-            $table->string('text');
-            $table->string('location');
-            $table->string('tweeted_at');
+            $table->bigIncrements('id')->comment('ツイートID');
+            $table->string('text')->comment('ツイート内容');
+            $table->string('location')->comment('ロケーション');
+            $table->dateTime('tweeted_at')->comment('ツイート日');
         });
     }
 
