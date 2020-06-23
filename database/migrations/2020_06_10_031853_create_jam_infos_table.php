@@ -17,8 +17,8 @@ class CreateJamInfosTable extends Migration
             $table->id()->comment('混雑情報ID');
             $table->string('popjam_id')->comment('');
             $table->string('area_id')->comment('地域ID');
-            $table->stirng('created_at');
-            $table->stirng('updated_at');
+            $table->string('created_at');
+            $table->string('updated_at');
         });
     }
 
