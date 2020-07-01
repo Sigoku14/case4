@@ -17,3 +17,4 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('twitter', 'TwitterController@index');
+Route::get('makeCsv', 'TwitterController@makeCsv');

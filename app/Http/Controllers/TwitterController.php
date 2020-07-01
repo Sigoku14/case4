@@ -13,10 +13,12 @@ class TwitterController extends Controller
         //ツイートを5件取得
         $result = \Twitter::get('statuses/home_timeline', array("q" => "コロナ", 'count' => 20));
 
-        //ViewのTwitter.blade.phpに渡す
-        return view('twitter', [
-            "result" => $result
-        ]);
+        // //ViewのTwitter.blade.phpに渡す
+        // return view('twitter', [
+        //     "result" => $result
+        // ]);
+
+        return redirect('makeCsv')->with('twitter', $result);
     }
 
     public function makeCsv(Request $request)
@@ -40,7 +42,7 @@ class TwitterController extends Controller
 
         // ヘッダー
         $array = ['header1', 'header2'];
-        $result = fopen($file, 'a');
+        $result = fopen($csv_file_path, 'w');
         // ファイルに書き出し
         fputcsv($result, $array);
         fclose($result);
@@ -48,13 +50,13 @@ class TwitterController extends Controller
 
         // 値を入れる
         foreach ($lists as $list) {
-            $result = fopen($file, 'a');
+            $result = fopen($csv_file_path, 'a');
             // ファイルに書き出し
             fputcsv($result, $list);
             fclose($result);
         }
 
-        $response = file_get_contents($file);
+        $response = file_get_contents($csv_file_path);
 
         return response($response, 200)
             ->header('Content-Type', 'text/csv')
