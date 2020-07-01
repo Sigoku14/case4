@@ -55,7 +55,7 @@ class LoginController extends Controller
         }
         // ログイン処理
         \Auth::login($user, true);
-        return redirect('/home');
+        // return redirect('/home');
 
         // API
         return response()->json(['name' => $gUser->name, 'email' => $gUser->email]);

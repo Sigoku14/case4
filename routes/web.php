@@ -15,3 +15,5 @@ Route::get('/', function (Request $request) {
     }
     return view('welcome');
 });
+
+Route::get('twitter', 'TwitterController@index');
