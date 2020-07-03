@@ -69,6 +69,7 @@ class LoginController extends Controller
             'name'     => $gUser->name,
             'email'    => $gUser->email,
             'password' => 'password',
+            'status'   => 1,
         ]);
         return $user;
     }

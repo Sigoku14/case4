@@ -16,8 +16,11 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             // $table->id();
             $table->bigIncrements('id')->comment('ユーザーID');
+            $table->string('name')->comment('ユーザーネーム');
+            $table->string('email')->comment('Gメールアドレス');
             $table->string('password')->comment('ユーザーパスワード');
-            $table->integer('status')->comment('状態'); // ->default(0);
+            $table->integer('status')->comment('状態')->nullable(); // ->default(0);
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }
