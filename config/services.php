@@ -35,11 +35,11 @@ return [
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('GOOGLE_CALLBACK_URL') . 'api/login/google/callback',
     ],
-    // return [
-    //     'api_key' => env('TWITTER_CLIENT_KEY', ''),
-    //     'secret_key' => env('TWITTER_CLIENT_SECRET', ''),
-    //     'access_token' => env('TWITTER_CLIENT_ID_ACCESS_TOKEN', ''),
-    //     'access_token_secret' => env('TWITTER_CLIENT_ID_ACCESS_TOKEN_SECRET', ''),
-    //     'call_back_url' => env('TWITTER_CALLBACK_URL', ''),
-    // ]
+    'twitter' => [
+        'api_key' => env('TWITTER_CLIENT_KEY', ''),
+        'secret_key' => env('TWITTER_CLIENT_SECRET', ''),
+        'access_token' => env('TWITTER_CLIENT_ID_ACCESS_TOKEN', ''),
+        'access_token_secret' => env('TWITTER_CLIENT_ID_ACCESS_TOKEN_SECRET', ''),
+        'call_back_url' => env('TWITTER_CALLBACK_URL', ''),
+    ]
 ];
