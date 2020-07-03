@@ -17,5 +17,17 @@ class Infections extends Seeder
             'number' => 1,
             'name' => 'COVID-19'
         ]);
+
+        DB::table('Infections')->insert([
+            'id' => 2,
+            'number' => 2,
+            'name' => 'エボラ出血熱'
+        ]);
+
+        DB::table('Infections')->insert([
+            'id' => 3,
+            'number' => 3,
+            'name' => 'インフルエンザ'
+        ]);
     }
 }
