@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LocationController extends Controller
+class NoticeController extends Controller
 {
-    public function location()
+    public function notice()
     {
         return response()->json([]);
     }

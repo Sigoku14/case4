@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LocationController extends Controller
+class ConfigurationController extends Controller
 {
-    public function location()
+    public function configuration()
     {
         return response()->json([]);
     }

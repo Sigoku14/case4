@@ -17,7 +17,54 @@ class InfPersons extends Seeder
             'route_taken'=> 1,
             'user_id'=> 1,
             'inf_area'=> 1,
-            'created_at'=> 'Fri Jun 12 16:50:47 +0000 2020'
+            'created_at'=> '2020/06/16'
+        ]);
+
+        DB::table('InfPersons')->insert([
+            'id'=> 2,
+            'route_taken'=> 2,
+            'user_id'=> 3,
+            'inf_area'=> 4,
+            'created_at'=> '2020/06/16'
+        ]);
+
+        DB::table('InfPersons')->insert([
+            'id'=> 3,
+            'route_taken'=> 2,
+            'user_id'=> 3,
+            'inf_area'=> 1,
+            'created_at'=> '2020/06/16'
+        ]);
+
+        DB::table('InfPersons')->insert([
+            'id'=> 4,
+            'route_taken'=> 5,
+            'user_id'=> 2,
+            'inf_area'=> 4,
+            'created_at'=> '2020/06/16'
+        ]);
+
+        DB::table('InfPersons')->insert([
+            'id'=> 5,
+            'route_taken'=> 8,
+            'user_id'=> 5,
+            'inf_area'=> 16,
+            'created_at'=> '2020/06/16'
+        ]);
+        DB::table('InfPersons')->insert([
+            'id'=> 6,
+            'route_taken'=> 1,
+            'user_id'=> 9,
+            'inf_area'=> 1,
+            'created_at'=> '2020/06/16'
+        ]);
+
+        DB::table('InfPersons')->insert([
+            'id'=> 7,
+            'route_taken'=> 4,
+            'user_id'=> 7,
+            'inf_area'=> 22,
+            'created_at'=> '2020/06/16'
         ]);
     }
 }
