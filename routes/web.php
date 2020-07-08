@@ -18,3 +18,6 @@ Route::get('/', function (Request $request) {
 
 Route::get('twitter', 'TwitterController@index');
 Route::get('makeCsv', 'TwitterController@makeCsv');
+
+Route::get('putJson', 'HomeController@putJson');
+Route::get('getJson', 'HomeController@getJson');

@@ -11,23 +11,27 @@ class TwitterController extends Controller
     public function index(Request $request)
     {
         //ツイートを5件取得
-        $result = \Twitter::get('statuses/home_timeline', array("q" => "コロナ", 'count' => 20));
+        $result = \Twitter::get('search/tweets', array("q" => "してる", 'count' => 100, 'geocode' => '35.794507,139.790788,1000km'));
+        $res = json_decode(json_encode($result), true);
 
-        // //ViewのTwitter.blade.phpに渡す
-        // return view('twitter', [
-        //     "result" => $result
-        // ]);
-
-        return redirect('makeCsv')->with('twitter', $result);
+        // dd($res);
+        return redirect('makeCsv')->withInput($res);
     }
 
     public function makeCsv(Request $request)
     {
-        // リスト
-        $lists = [
-            ['おはよう', 'おやすみ'],
-            ['こんにちは', 'さようなら'],
-        ];
+        $req = $request->session()->get('_old_input');
+        // dd($req["statuses"]);
+        $cnt = 1;
+        $lists = [];
+        foreach ($req["statuses"] as $list) {
+            // foreach ($list as $li) {
+            //     $lists = $li['text'];
+            // }
+            $lists[$cnt] = $list["text"];
+            $cnt++;
+        }
+        // dd($lists);
 
         $filename = 'demo.csv';
         $csv_file_path = storage_path('app/' . $filename);
@@ -41,7 +45,7 @@ class TwitterController extends Controller
         $file = $result;
 
         // ヘッダー
-        $array = ['header1', 'header2'];
+        $array = ['header1'];
         $result = fopen($csv_file_path, 'w');
         // ファイルに書き出し
         fputcsv($result, $array);
@@ -52,8 +56,9 @@ class TwitterController extends Controller
         foreach ($lists as $list) {
             $result = fopen($csv_file_path, 'a');
             // ファイルに書き出し
-            fputcsv($result, $list);
+            fputcsv($result, [$list]);
             fclose($result);
+            // dd($list);
         }
 
         $response = file_get_contents($csv_file_path);
