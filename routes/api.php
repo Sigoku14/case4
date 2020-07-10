@@ -23,4 +23,15 @@ Route::get('/login/google/callback', 'Auth\LoginController@handleGoogleCallback'
 
 Route::get('twitter', 'TwitterController@index');
 
-Route::get('test', 'RequestController@index');
+
+Route::get('diseases', 'RequestController@diseases');
+Route::get('infections', 'RequestController@infections');
+Route::get('inf_measures', 'RequestController@inf_measures');
+Route::get('inf_persons', 'RequestController@inf_persons');
+Route::get('inf_predicts', 'RequestController@inf_predicts');
+Route::get('jam_areas', 'RequestController@jam_areas');
+Route::get('jam_infos', 'RequestController@jam_infos');
+Route::get('jam_predicts', 'RequestController@jam_predicts');
+Route::get('locations', 'RequestController@locations');
+Route::get('pop_jam_rates', 'RequestController@pop_jam_rates');
+Route::get('tweets', 'RequestController@tweets');
