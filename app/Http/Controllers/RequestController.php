@@ -39,6 +39,16 @@ class RequestController extends Controller
         // dd($users);
 
         return response()->json(['diseases' => $diseases]);
+        return response()->json(['infections' => $infections]);
+        return response()->json(['inf_measures' => $inf_measures]);
+        return response()->json(['inf_persons' => $inf_persons]);
+        return response()->json(['inf_predicts' => $inf_predicts]);
+        return response()->json(['jam_areas' => $jam_areas]);
+        return response()->json(['jam_infos' => $jam_infos]);
+        return response()->json(['jam_predicts' => $jam_predicts]);
+        return response()->json(['locations' => $locations]);
+        return response()->json(['pop_jam_rates' => $pop_jam_rates]);
+        return response()->json(['tweets' => $tweets]);
         // return ['apple' => 'red', 'peach' => 'pink'];
         // return view('index', compact('values'));
     }
