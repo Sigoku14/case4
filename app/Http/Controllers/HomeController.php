@@ -11,6 +11,7 @@ class HomeController extends Controller
 {
     public function __construct()
     {
+<<<<<<< HEAD
         $this->middleware('auth');
     }
 
@@ -45,5 +46,8 @@ class HomeController extends Controller
                 ['popjam_id' => $popjam_id, 'area_id' => $area_id, 'predicts_date' => $predicts_date, 'created_at' => $at, 'updated_at' => $at]
             );
         }
+=======
+        return response()->json([]);
+>>>>>>> ebcd100bb73ac5c8b873db6d47b13c96b116a854
     }
 }
