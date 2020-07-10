@@ -15,10 +15,10 @@ class CreatePopJamRatesTable extends Migration
     {
         Schema::create('pop_jam_rates', function (Blueprint $table) {
             $table->id()->comment("人口集中率ID");
-            $table->population()->comment("人口");
-            $table->area_id()->comment("地域ID");
-            $table->pop_jam_rate()->comment("人口集中割合");
-            $table->created_at();
+            $table->string('population')->comment("人口");
+            $table->integer('area_id')->comment("地域ID");
+            $table->string('pop_jam_rate')->comment("人口集中割合");
+            $table->dateTime('created_at');
         });
     }
 

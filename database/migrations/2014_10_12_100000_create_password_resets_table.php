@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJamAreasTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateJamAreasTable extends Migration
      */
     public function up()
     {
-        Schema::create('jam_areas', function (Blueprint $table) {
-            $table->id()->comment("密集ID");
-            $table->string('latitude')->comment("緯度");
-            $table->string('longitude')->comment("経度");
-            $table->dateTime('created_at');
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email');
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateJamAreasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jam_areas');
+        Schema::dropIfExists('password_resets');
     }
 }

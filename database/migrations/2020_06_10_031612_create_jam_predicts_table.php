@@ -17,9 +17,9 @@ class CreateJamPredictsTable extends Migration
             $table->id()->comment('混雑予想ID');
             $table->string('popjam_id')->comment('');
             $table->string('area_id')->comment('地域ID');
-            $table->stirng('predicts_date')->comment('予想日(テキスト)');
-            $table->stirng('created_at');
-            $table->stirng('updated_at');
+            $table->string('predicts_date')->comment('予想日(テキスト)');
+            $table->string('created_at');
+            $table->string('updated_at');
         });
     }
 
