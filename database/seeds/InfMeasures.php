@@ -27,11 +27,7 @@ class InfMeasures extends Seeder
         DB::table('InfMeasures')->insert([
             'id' => 3,
             'measure' => '具合が悪いときは自宅にいるようにしましょう。',
-<<<<<<< HEAD
             'created_at' => '2020/06/21'
-=======
-            'created_at' => '2020/06/20'
->>>>>>> ebcd100bb73ac5c8b873db6d47b13c96b116a854
         ]);
 
         DB::table('InfMeasures')->insert([
