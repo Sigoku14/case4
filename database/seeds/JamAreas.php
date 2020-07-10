@@ -16,7 +16,7 @@ class JamAreas extends Seeder
             'id'=> 1,
             'latitude' => -122.41942,
             'longitude' => 37.77493,
-            'created_at'=> 'Fri Jun 12 16:50:47 +0000 2020'
+            'created_at'=> '2020-07-22 12:00:00'
         ]);
     }
 }

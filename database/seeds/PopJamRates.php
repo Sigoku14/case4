@@ -16,8 +16,8 @@ class PopJamRates extends Seeder
             'id' => 1,
             'population'=> 2000,
             'area_id'=> 1,
-            'pop_jam'=> 1.13,
-            'created_at' => 'Fri Jun 12 16:50:47 +0000 2020'
+            'pop_jam_rate'=> 1.13,
+            'created_at' => '2020-07-22 12:00:00'
         ]);
     }
 }

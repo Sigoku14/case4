@@ -15,9 +15,9 @@ class JamInfos extends Seeder
         DB::table('jam_infos')->insert([
             'id'=> 1,
             'popjam_id'=> 1,
-            'aread'=> 1,
-            'created_at'=> 'Wed Jun 10 16:50:47 +0000 2020',
-            'update_at'=> 'Fri Jun 12 16:50:47 +0000 2020',
+            'area_id'=> 1,
+            'created_at'=> '2020-07-22 12:00:00',
+            'updated_at'=> '2020-07-22 12:00:00',
         ]);
     }
 }
