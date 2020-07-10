@@ -12,7 +12,7 @@ class Locations extends Seeder
     public function run()
     {
         //場所
-        DB::table('Location')->insert([
+        DB::table('locations')->insert([
             'id' => 1,
             'user_id' => 1,
             'latitude' => -122.41942,

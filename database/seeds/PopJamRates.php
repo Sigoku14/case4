@@ -12,7 +12,7 @@ class PopJamRates extends Seeder
     public function run()
     {
         //人口集中率
-        DB::table('PopJamRates')->insert([
+        DB::table('pop_jam_rates')->insert([
             'id' => 1,
             'population'=> 2000,
             'area_id'=> 1,

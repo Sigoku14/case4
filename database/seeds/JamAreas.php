@@ -12,7 +12,7 @@ class JamAreas extends Seeder
     public function run()
     {
         //密集状況
-        DB::table('JamAreas')->insert([
+        DB::table('jam_areas')->insert([
             'id'=> 1,
             'latitude' => -122.41942,
             'longitude' => 37.77493,

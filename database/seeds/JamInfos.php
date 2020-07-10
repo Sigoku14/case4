@@ -12,7 +12,7 @@ class JamInfos extends Seeder
     public function run()
     {
         //混雑情報
-        DB::table('JamInfos')->insert([
+        DB::table('jam_infos')->insert([
             'id'=> 1,
             'popjam_id'=> 1,
             'aread'=> 1,

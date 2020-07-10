@@ -12,7 +12,7 @@ class JamPredicts extends Seeder
     public function run()
     {
         //混雑予想
-        DB::table('JamPredicts')->insert([
+        DB::table('jam_predicts')->insert([
             'id'=>1,
             'pop_jam_id'=> 1,
             'areaa_id'=> 1,

@@ -22,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/login/google/callback', 'Auth\LoginController@handleGoogleCallback');
 
 Route::get('twitter', 'TwitterController@index');
+
+Route::get('test', 'RequestController@index');
