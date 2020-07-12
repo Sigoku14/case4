@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-// use Laravel\Ui\Presets\React;
+use Google\Cloud\AutoMl\V1\AutoMlClient;
+use Google\Cloud\AutoMl\V1\TranslationDatasetMetadata;
 
 class HomeController extends Controller
 {
@@ -45,5 +46,16 @@ class HomeController extends Controller
                 ['popjam_id' => $popjam_id, 'area_id' => $area_id, 'predicts_date' => $predicts_date, 'created_at' => $at, 'updated_at' => $at]
             );
         }
+
+        $autoMlClient = new AutoMlClient();
+        $formattedParent = $autoMlClient->locationName('case4', '');
+        $dataset = new Dataset([
+            'display_name' => '[DISPLAY_NAME]',
+            'translation_dataset_metadata' => new TranslationDatasetMetadata([
+                'source_language_code' => 'en',
+                'target_language_code' => 'es'
+            ])
+        ]);
+        $response = $autoMlClient->createDataset($formattedParent, $dataset);
     }
 }
