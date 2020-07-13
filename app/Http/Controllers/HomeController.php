@@ -48,11 +48,11 @@ class HomeController extends Controller
         }
 
         $autoMlClient = new AutoMlClient();
-        $formattedParent = $autoMlClient->locationName('case4', '');
+        $formattedParent = $autoMlClient->locationName('case4', 'ASIA-NORTHEAST1');
         $dataset = new Dataset([
-            'display_name' => '[DISPLAY_NAME]',
+            'display_name' => 'case4',
             'translation_dataset_metadata' => new TranslationDatasetMetadata([
-                'source_language_code' => 'en',
+                'source_language_code' => 'ja',
                 'target_language_code' => 'es'
             ])
         ]);

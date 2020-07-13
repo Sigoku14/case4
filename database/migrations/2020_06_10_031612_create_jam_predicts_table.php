@@ -16,7 +16,8 @@ class CreateJamPredictsTable extends Migration
         Schema::create('jam_predicts', function (Blueprint $table) {
             $table->id()->comment('混雑予想ID');
             $table->string('popjam_id')->comment('');
-            $table->string('area_id')->comment('地域ID');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->string('predicts_date')->comment('予想日(テキスト)');
             $table->string('created_at');
             $table->string('updated_at');

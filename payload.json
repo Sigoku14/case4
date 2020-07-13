@@ -1,74 +1,73 @@
 {
-  "payload": [
-    {
-        "name": "大阪駅",
-        "latitude": 34.702485,
-        "longitude": 135.495951,
-        "date": "2020-07-22",
-        "percentage": 60
-    },
-    {
-        "name": "梅田",
-        "latitude": 34.700559,
-        "longitude": 135.495734,
-        "date": "2020-07-22",
-        "percentage": 70
-    },
-    {
-        "name": "NU茶町",
-        "latitude": 34.706875,
-        "longitude": 135.499138,
-        "date": "2020-07-22",
-        "percentage": 60
-    },
-    {
-        "name": "なんば",
-        "latitude": 34.665753,
-        "longitude": 135.501036,
-        "date": "2020-07-22",
-        "percentage": 50
-    },
-    {
-        "name": "天神橋筋商店街",
-        "latitude": 34.710555,
-        "longitude": 135.511243,
-        "date": "2020-07-22",
-        "percentage": 70
-    },
-    {
-        "name": "堂山",
-        "latitude":  34.703526,
-        "longitude": 135.503393,
-        "date": "2020-07-22",
-        "percentage": 70
-    },
-    {
-        "name": "梅田スカイビル",
-        "latitude": 34.705384,
-        "longitude": 135.490002,
-        "date": "2020-07-22",
-        "percentage": 20
-    },
-    {
-        "name": "グランフロント大阪",
-        "latitude":  34.704048,
-        "longitude": 135.494883,
-        "date": "2020-07-22",
-        "percentage": 80
-    },
-    {
-        "name": "北新地",
-        "latitude": 34.698398,
-        "longitude": 135.496276,
-        "date": "2020-07-22",
-        "percentage": 30
-    },
-    {
-        "name": "お初天神",
-        "latitude": 34.699268,
-        "longitude": 135.500763,
-        "date": "2020-07-22",
-        "percentage": 70
-    }
-  ]
+    "payload": [{
+            "name": "大阪駅",
+            "latitude": 34.702485,
+            "longitude": 135.495951,
+            "date": "2020-07-22",
+            "percentage": 60
+        },
+        {
+            "name": "梅田",
+            "latitude": 34.700559,
+            "longitude": 135.495734,
+            "date": "2020-07-22",
+            "percentage": 70
+        },
+        {
+            "name": "NU茶町",
+            "latitude": 34.706875,
+            "longitude": 135.499138,
+            "date": "2020-07-22",
+            "percentage": 60
+        },
+        {
+            "name": "なんば",
+            "latitude": 34.665753,
+            "longitude": 135.501036,
+            "date": "2020-07-22",
+            "percentage": 50
+        },
+        {
+            "name": "天神橋筋商店街",
+            "latitude": 34.710555,
+            "longitude": 135.511243,
+            "date": "2020-07-22",
+            "percentage": 70
+        },
+        {
+            "name": "堂山",
+            "latitude": 34.703526,
+            "longitude": 135.503393,
+            "date": "2020-07-22",
+            "percentage": 70
+        },
+        {
+            "name": "梅田スカイビル",
+            "latitude": 34.705384,
+            "longitude": 135.490002,
+            "date": "2020-07-22",
+            "percentage": 20
+        },
+        {
+            "name": "グランフロント大阪",
+            "latitude": 34.704048,
+            "longitude": 135.494883,
+            "date": "2020-07-22",
+            "percentage": 80
+        },
+        {
+            "name": "北新地",
+            "latitude": 34.698398,
+            "longitude": 135.496276,
+            "date": "2020-07-22",
+            "percentage": 30
+        },
+        {
+            "name": "お初天神",
+            "latitude": 34.699268,
+            "longitude": 135.500763,
+            "date": "2020-07-22",
+            "percentage": 70
+        }
+    ]
 }
