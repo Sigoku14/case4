@@ -16,7 +16,11 @@ class OAuthLoginController extends Controller
     // Googleの認証ページへのリダイレクト処理
     public function getGoogleAuth($provider)
     {
-        return Socialite::driver($provider)->redirect();
+        $redirectUrl = Socialite::driver($provider)->redirect()->getTargetUrl();
+
+        return response()->json([
+            'redirect_url' => $redirectUrl
+        ]);
     }
 
     // Googleの認証情報からユーザー情報の取得

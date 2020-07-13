@@ -57,11 +57,9 @@ class LoginController extends Controller
         \Auth::login($user, true);
         // return redirect('/home');
 
-        // API
-        return response()->json(['name' => $gUser->name, 'email' => $gUser->email]);
-        // $name = User::where('name', $gUser->name);
-        // $email = User::where('email', $gUser->email);
-        // return response()->json(['name' => $name, 'email' => $email]);
+        $token = $gUser->token;
+
+        return response()->json(compact('user', 'token'));
     }
     public function createUserByGoogle($gUser)
     {
