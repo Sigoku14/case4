@@ -15,7 +15,7 @@
 cp .env.example .env
 ```
 
-とコマンドに入力してね。
+とコマンドに入力してね。。。。。。。
 
 <h2 style="color: crimson"> ★ Composer のインストール</h2>
 
