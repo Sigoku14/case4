@@ -33,7 +33,8 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_CALLBACK_URL') . 'api/login/google/callback',
+        'redirect' => env('GOOGLE_CALLBACK_URL') . 'oauth/google/callback',
+        // 'redirect' => env('GOOGLE_CALLBACK_URL') . 'api/login/google/callback',
     ],
     'twitter' => [
         'api_key' => env('TWITTER_CLIENT_KEY', ''),
