@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function index()
     {
@@ -33,17 +33,22 @@ class HomeController extends Controller
     }
     public function getJson(Request $request)
     {
-        $json = json_decode($request->input('json'));
+        // $json = json_decode($request->file('json'));
+        $json = json_decode($request->file('json'), true) ?? [];
+
+        // dd($request->file('json'));
 
         foreach ($json as $parts) {
-            $popjam_id = 1;
-            $area_id = $parts['area'];
+            $name = $parts['name'];
+            $lat = $parts['latitude'];
+            $long = $parts['longitude'];
             $predicts_date = $parts['date'];
             $at = date('Y-m-d H:i:s');
 
             DB::table('jam_predicts')->insert(
-                ['popjam_id' => $popjam_id, 'area_id' => $area_id, 'predicts_date' => $predicts_date, 'created_at' => $at, 'updated_at' => $at]
+                ['name' => $name, 'latitude' => $lat, 'longitude' => $long, 'predicts_date' => $predicts_date, 'created_at' => $at, 'updated_at' => $at]
             );
         }
+        return view('jsonSend');
     }
 }

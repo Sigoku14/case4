@@ -17,8 +17,10 @@ Route::get('twitter', 'TwitterController@index');
 Route::get('makeCsv', 'TwitterController@makeCsv');
 
 Route::get('putJson', 'HomeController@putJson');
-Route::get('getJson', 'HomeController@getJson');
-Route::prefix('auth')->middleware('guest')->group(function() {
+
+Route::post('getJson', 'HomeController@getJson');
+
+Route::prefix('auth')->middleware('guest')->group(function () {
     Route::get('/{service}', 'OAuthLoginController@getGoogleAuth')
         ->where('service', 'google');
     // Route::get('api/login/google/callback', 'Auth\LoginController@handleGoogleCallback');
