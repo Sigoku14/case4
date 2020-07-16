@@ -35,3 +35,5 @@ Route::get('jam_predicts', 'RequestController@jam_predicts');
 Route::get('locations', 'RequestController@locations');
 Route::get('pop_jam_rates', 'RequestController@pop_jam_rates');
 Route::get('tweets', 'RequestController@tweets');
+
+Route::get('notice', 'NoticeController@notice');
