@@ -11,14 +11,14 @@ class RequestController extends Controller
     {
         $diseases = DB::table('diseases')->select()->get();
         // ->where('id', '=', 1)
-        dd($diseases);
+        // dd($diseases);
         return response()->json(['diseases' => $diseases]);
     }
 
     public function infections()
     {
         $infections = DB::table('infections')->select()->get();
-        dd($infections);
+        // dd($infections);
         return response()->json(['infections' => $infections]);
     }
 
