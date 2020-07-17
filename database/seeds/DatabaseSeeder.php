@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(InfPredicts::class);
         $this->call(JamAreas::class);
         $this->call(JamInfos::class);
-        // $this->call(JamPredicts::class);
+        $this->call(JamPredicts::class);
         $this->call(Locations::class);
         $this->call(PopJamRates::class);
         $this->call(Tweets::class);
