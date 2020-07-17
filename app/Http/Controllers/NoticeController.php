@@ -28,9 +28,7 @@ class NoticeController extends Controller
         // dd($analyze->entities());
         foreach ($analyze->entities() as $name) {
             // dd($name['name']);
+            $keyword = $name['name'];
         }
-
-        echo 'Text: ' . $text . '
-        Sentiment: ' . $sentiment['score'] . ', ' . $sentiment['magnitude'];
     }
 }
