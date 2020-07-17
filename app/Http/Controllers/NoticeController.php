@@ -29,6 +29,17 @@ class NoticeController extends Controller
         foreach ($analyze->entities() as $name) {
             // dd($name['name']);
             $keyword = $name['name'];
+
+
+            // キーワード検索API
+            $client = new Client();
+            // $response = $client->request("GET", 'http://geoapi.heartrails.com/api/json?method=suggest&keyword='.$keyword.'&matching=prefix');
+            $response = $client->request("GET", 'https://maps.googleapis.com/maps/api/geocode/json?address='.$keyword.'components=country:JP&key=AIzaSyCTy9rzX3GsQbXDlw_JzDrU_jPm5WhA0XE');
+
+            // APIで取得したJSONデータを配列変換
+            $posts = $response->getBody();
+            $posts = json_decode($posts, true);
+
         }
     }
 }
