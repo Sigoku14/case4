@@ -10,7 +10,7 @@ class NoticeController extends Controller
     public function notice(Request $request)
     {
         // $text = $request->input('text');
-        $text = "梅田駅が混雑している";
+        $text = "梅田駅が混雑している。難波も多かったな。";
 
         # Your Google Cloud Platform project ID
         $projectId = 'case4';
@@ -24,6 +24,11 @@ class NoticeController extends Controller
         $annotation = $language->analyzeSentiment($text);
         $analyze = $language->analyzeEntities($text);
         $sentiment = $annotation->sentiment();
+
+        // dd($analyze->entities());
+        foreach ($analyze->entities() as $name) {
+            // dd($name['name']);
+        }
 
         echo 'Text: ' . $text . '
         Sentiment: ' . $sentiment['score'] . ', ' . $sentiment['magnitude'];
