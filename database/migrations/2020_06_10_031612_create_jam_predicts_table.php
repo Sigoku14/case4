@@ -19,8 +19,8 @@ class CreateJamPredictsTable extends Migration
             $table->string('latitude');
             $table->string('longitude');
             $table->string('predicts_date')->comment('予想日(テキスト)');
+            $table->integer('percentage');
             $table->string('created_at');
-            $table->string('updated_at');
         });
     }
 

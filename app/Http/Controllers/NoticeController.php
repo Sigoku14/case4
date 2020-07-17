@@ -25,8 +25,6 @@ class NoticeController extends Controller
         $analyze = $language->analyzeEntities($text);
         $sentiment = $annotation->sentiment();
 
-        // dd($analyze);
-
         echo 'Text: ' . $text . '
         Sentiment: ' . $sentiment['score'] . ', ' . $sentiment['magnitude'];
     }
