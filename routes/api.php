@@ -36,4 +36,4 @@ Route::get('locations', 'RequestController@locations');
 Route::get('pop_jam_rates', 'RequestController@pop_jam_rates');
 Route::get('tweets', 'RequestController@tweets');
 
-Route::post('notice', 'NoticeController@notice');//投稿
+Route::get('notice', 'NoticeController@notice');//投稿

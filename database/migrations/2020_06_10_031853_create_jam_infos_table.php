@@ -15,10 +15,10 @@ class CreateJamInfosTable extends Migration
     {
         Schema::create('jam_infos', function (Blueprint $table) {
             $table->id()->comment('混雑情報ID');
-            $table->string('popjam_id')->comment('');
-            $table->string('area_id')->comment('地域ID');
+            $table->string('name');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->string('created_at');
-            $table->string('updated_at');
         });
     }
 
