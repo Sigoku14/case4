@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLocationsTable extends Migration
+class CreateAlartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateLocationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id')->comment('ユーザーID');
+        Schema::create('alarts', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id');
             $table->string('name');
-            $table->string('latitude')->comment('緯度');
-            $table->string('longitude')->comment('経度');
+            $table->string('text');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateLocationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('locations');
+        Schema::dropIfExists('alarts');
     }
 }
