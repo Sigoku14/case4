@@ -11,8 +11,8 @@ class NoticeController extends Controller
 {
     public function notice(Request $request)
     {
-        // $text = $request->input('text');
-        $text = "梅田駅が混雑している。京橋も多かったな。";
+        $text = $request->input('text');
+        // $text = "梅田駅が混雑している。京橋も多かったな。";
 
         # Your Google Cloud Platform project ID
         $projectId = 'case4';

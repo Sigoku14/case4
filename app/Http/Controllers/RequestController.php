@@ -59,8 +59,17 @@ class RequestController extends Controller
 
     public function jam_predicts()
     {
-        $jam_predicts = DB::table('jam_predicts')->select()->get();
-        // dd($jam_predicts);
+        $date = date('Y-m-d');
+        $now = date('H');
+        // $now = 23;
+        $time = $date . ' ' . $now . ':00:00';
+        // $jam_predicts = DB::table('jam_predicts')->select()->get();
+
+        $jam_predicts = DB::table('jam_predicts')->select()
+            ->where('predicts_date', '=', $time)
+            ->get();
+
+        // dd($time);
         return response()->json(['jam_predicts' => $jam_predicts]);
     }
 

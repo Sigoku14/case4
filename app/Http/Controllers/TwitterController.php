@@ -16,7 +16,7 @@ class TwitterController extends Controller
     public function index(Request $request)
     {
         //ツイートを5件取得
-        $result = \Twitter::get('search/tweets', array("q" => "してる", 'count' => 100, 'geocode' => '35.794507,139.790788,1000km'));
+        $result = \Twitter::get('search/tweets', array("q" => "混雑", 'count' => 100, 'geocode' => '35.794507,139.790788,1000km'));
         $res = json_decode(json_encode($result), true);
 
         // dd($res);
